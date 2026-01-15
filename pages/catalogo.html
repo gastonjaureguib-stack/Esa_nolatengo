@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segunda Entrega</title>
+  <!-- Archivo CSS principal -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <!-- ========== BLOQUE 1: HEADER (Encabezado general del sitio) ========== -->
+  <header>
+
+    <!-- Logo de la marca -->
+    <div class="imagenlogo"> <!-- Contenedor del logo -->
+      <img src="../media/img/index/imglogo.png" alt="logo de la marca">
+    </div>
+
+    <!-- Título principal -->
+    <div class="titulo"> <!-- Contenedor del H1 -->
+      <h1>Boutique de plantas</h1>
+    </div>
+
+    <!-- nav principal con boostrap -->
+    <nav class="navbar navbar-expand-lg menuburger">
+
+      <div class="container-fluid">
+
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+
+        <!-- Menú que colapsa -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/nosotros.html">Nosotros</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Catálogo</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../pages/catalogo.html">Interior</a></li>
+                <li><a class="dropdown-item" href="../pages/catalogo.html">Exterior</a></li>
+                <li><a class="dropdown-item" href="../pages/catalogo.html">Exóticas</a></li>
+                <li><a class="dropdown-item" href="../pages/enconstruccion.html">Productos</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/comunidad.html">Comunidad</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Submenú / Login de la comunidad -->
+    <div class="loginmenu"> <!-- Contenedor de login/registro -->
+      <div class="opcionmenu"> <!-- Botón iniciar sesión -->
+        <a href="">Iniciar sesión</a>
+      </div>
+      <div class="opcionmenu"> <!-- Botón registrarse -->
+        <a href="">Registrarse</a>
+      </div>
+    </div>
+
+  </header>
+
+
+  <!-- ========== BLOQUE 2: main ========== -->
+
+  <main>
+
+    <!-- ========== SECCIÓN: Plantas comunes: Con Boostrap ========== -->
+
+    <section class="catalogo">
+      <div class="container">
+
+        <div id="carouselExampleAutoplaying" class="carousel slide carousel-catalogo" data-bs-ride="carousel">
+
+          <h2>Nuestras Plantas</h2>
+
+          <div class="carousel-inner">
+
+            <!-- ========== Producto 1: Birkin ========== -->
+            <div class="carousel-item active text-center">
+              <img src="../media/img/catalogo/birkin.png" class="img-fluid" alt="Portada foto birkin">
+            </div>
+            <!-- ========== Producto 2: Longiloba ========== -->
+            <div class="carousel-item text-center">
+              <img src="../media/img/catalogo/longiloba.png" class="img-fluid" alt="Portada foto Longiloba">
+            </div>
+            <!-- ========== Producto 3: Nephente ========== -->
+            <div class="carousel-item text-center">
+              <img src="../media/img/catalogo/nephente.png" class="img-fluid" alt="Portada foto nephente">
+            </div>
+            <!-- ========== Producto 4: Adanzonii ========== -->
+            <div class="carousel-item text-center">
+              <img src="../media/img/catalogo/adanzonii.png" class="img-fluid" alt="Portada foto Adanzonii">
+            </div>
+            <!-- ========== Producto 5: Peperomia ========== -->
+            <div class="carousel-item text-center">
+              <img src="../media/img/catalogo/peperomia.png" class="img-fluid" alt="Portada foto Peperomia">
+            </div>
+            <!-- ========== Producto 6: Lirio ========== -->
+            <div class="carousel-item text-center">
+              <img src="../media/img/catalogo/liriodelapaz.png" class="img-fluid" alt="Portada foto liriodelapaz">
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========== Cards de plantas ========== -->
+
+    <section class="card-plantas">
+      <div class="container-plantas">
+
+
+        <!-- ========== planta 1 birkin ========== -->
+
+        <div class="card" style="width: 18rem;">
+
+          <span class="precio">$2.500</span>
+
+          <img src="../media/img/catalogo/birkin.png" class="card-img-top" alt="Planta Birkin">
+          <div class="card-body">
+            <h5 class="card-title">Philodentro Birkin</h5>
+            <p class="card-text">Una planta resistente a la falta de luz, Ideal para apartamentos y balcones.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Riego: Bajo. Una vez al mes</li>
+            <li class="list-group-item">Cuidados simples</li>
+            <li class="list-group-item">Crecimiento lento</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Agregar al carrito</a>
+
+          </div>
+        </div>
+
+        <!-- ========== planta 2 lirio de la paz ========== -->
+        <div class="card" style="width: 18rem;">
+          <span class="precio">$1.500</span>
+          <img src="../media/img/catalogo/liriodelapaz.png" class="card-img-top" alt="Planta Lirio de la paz">
+          <div class="card-body">
+            <h5 class="card-title">Lirio de la Paz</h5>
+            <p class="card-text">Aporta frescura, armonía y un toque natural a tu hogar u oficina..</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Riego alto, una vez x semana</li>
+            <li class="list-group-item">Cuidados simples</li>
+            <li class="list-group-item">Crecimiento rápido</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Agregar al carrito</a>
+
+          </div>
+
+        </div>
+
+        <!-- ========== planta 3 Nephente ========== -->
+        <div class="card" style="width: 18rem;">
+          <span class="precio">$2.500</span>
+          <img src="../media/img/catalogo/nephente.png" class="card-img-top" alt="Planta nephente">
+          <div class="card-body">
+            <h5 class="card-title">Nephente</h5>
+            <p class="card-text">Exótica y fascinante e insectivora; una verdadera joya</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Riego alto, una vez x semana</li>
+            <li class="list-group-item">Cuidados simples</li>
+            <li class="list-group-item">Crecimiento rápido</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Agregar al carrito</a>
+
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ========== SECCIÓN: exoticas: Con Boostrap ========== -->
+    <section class="exoticas">
+      <div class="container">
+
+
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+
+          <h2>Nuestras Exóticas</h2>
+
+          <div class="carousel-inner">
+
+            <!-- Planta 1 Cuerno de alce -->
+            <div class="carousel-item active">
+              <img src="../media/img/catalogo/cuernodealce.png" class="img-fluid" alt="Imagen de Cuerno de alce">
+            </div>
+            <!-- Planta 2 Pacova -->
+            <div class="carousel-item">
+              <img src="../media/img/catalogo/pacova.png" class="img-fluid" alt="Imagen de planta pacova">
+            </div>
+            <!-- Planta 3 Blackmagic -->
+            <div class="carousel-item">
+              <img src="../media/img/catalogo/alocasiamagic.png" class="img-fluid" alt="Planta Black Magic">
+            </div>
+            <!-- Planta 4 Blackmagic -->
+            <div class="carousel-item">
+              <img src="../media/img/catalogo/variegada.png" class="img-fluid" alt="Planta Monstera Variegada">
+            </div>
+            <!-- Planta 5 pink Princess -->
+            <div class="carousel-item">
+              <img src="../media/img/catalogo/pinkprincess.png" class="img-fluid" alt="Planta Pink Princess">
+            </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+
+    </Section>
+
+    <!-- ========== Cards de Exóticas ========== -->
+
+    <section class="card-exoticas">
+      <div class="container">
+
+        <!-- ========== planta 1 birkin ========== -->
+
+        <div class="card" style="width: 18rem;">
+          <span class="precio">$1.500</span>
+          <img src="../media/img/catalogo/cuernodealce.png" class="card-img-top" alt="Planta Cuerno de alce">
+          <div class="card-body">
+            <h5 class="card-title">Cuerno de alce</h5>
+            <p class="card-text">Planta original y decorativa, de aspecto escultural. Ideal para colgar y dar un toque
+              natural y diferente a tus espacios.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Riego: Bajo. Una vez al mes</li>
+            <li class="list-group-item">Cuidados simples</li>
+            <li class="list-group-item">Crecimiento lento</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Agregar al carrito</a>
+
+          </div>
+        </div>
+
+        <!-- ========== planta 2 Pacova ========== -->
+        <div class="card" style="width: 18rem;">
+          <span class="precio">$2.500</span>
+          <img src="../media/img/catalogo/pacova.png" class="card-img-top" alt="Planta Pacova">
+          <div class="card-body">
+            <h5 class="card-title">Pacova</h5>
+            <p class="card-text">De hojas grandes y brillantes, aporta presencia y un aire tropical. Perfecta para
+              interiores amplios y luminosos.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Riego alto, una vez x semana</li>
+            <li class="list-group-item">Cuidados simples</li>
+            <li class="list-group-item">Crecimiento rápido</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Agregar al carrito</a>
+
+          </div>
+
+        </div>
+
+        <!-- ========== planta 3 Black Magic ========== -->
+        <div class="card" style="width: 18rem;">
+          <span class="precio">$2.500</span>
+          <img src="../media/img/catalogo/alocasiamagic.png" class="card-img-top" alt="Planta Black Magic">
+          <div class="card-body">
+            <h5 class="card-title">Black Magic</h5>
+            <p class="card-text">Intensa y elegante, sus hojas oscuras crean un contraste único. Una planta que sin
+              dudas debes tener en tu jardín. </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Riego alto, una vez x semana</li>
+            <li class="list-group-item">Cuidados simples</li>
+            <li class="list-group-item">Crecimiento rápido</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Agregar al carrito</a>
+
+          </div>
+
+
+
+
+        </div>
+
+        <!-- ========== planta 4 Monstera Variegada ========== -->
+        <div class="card" style="width: 18rem;">
+          <span class="precio">$2.500</span>
+          <img src="../media/img/catalogo/variegada.png" class="card-img-top" alt="Planta Monstera Variegada">
+          <div class="card-body">
+            <h5 class="card-title">Monstera Variegada</h5>
+            <p class="card-text">Exótica y muy apreciada, combina hojas verdes con manchas claras. Esta realmente es una
+              pieza de colección. </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Riego alto, una vez x semana</li>
+            <li class="list-group-item">Cuidados simples</li>
+            <li class="list-group-item">Crecimiento rápido</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Agregar al carrito</a>
+
+          </div>
+
+
+        </div>
+
+
+        <!-- ========== planta 5 Pink Princess ========== -->
+        <div class="card" style="width: 18rem;">
+          <span class="precio">$2.500</span>
+          <img src="../media/img/catalogo/pinkprincess.png" class="card-img-top" alt="Planta Pink Princess">
+          <div class="card-body">
+            <h5 class="card-title">Pink Princess</h5>
+            <p class="card-text">Sofisticada y llamativa, destaca por sus tonos rosados. Perfecta para sumar color y
+              personalidad en cualquier ambiente.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Riego alto, una vez x semana</li>
+            <li class="list-group-item">Cuidados simples</li>
+            <li class="list-group-item">Crecimiento rápido</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Agregar al carrito</a>
+
+          </div>
+
+
+        </div>
+
+        <!-- ========== planta 6 Pileas ========== -->
+        <div class="card" style="width: 18rem;">
+          <span class="precio">$2.500</span>
+          <img src="../media/img/catalogo/pilea.png" class="card-img-top" alt="Planta Pilea">
+          <div class="card-body">
+            <h5 class="card-title">Pilea</h5>
+            <p class="card-text">Fresca y simpática, de hojas redondeadas. Ideal para interiores, fácil de cuidar y muy
+              decorativa. Ideal para los estantes.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Riego alto, una vez x semana</li>
+            <li class="list-group-item">Cuidados simples</li>
+            <li class="list-group-item">Crecimiento rápido</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Agregar al carrito</a>
+
+          </div>
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+  </main>
+
+  <!-- ========== BLOQUE 3: FOOTER (Pie de página) ========== -->
+  <footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/" class="wpbottom">
+      <img src="../media/img/index/botonwhatsapp.png" alt="Logo de WhatsApp">
+    </a>
+
+    <div class="footer-grid">
+
+      <!-- Columna 1 -->
+      <div class="footer-col">
+        <h3>Gracias por elegirnos!</h3>
+        <nav>
+          <ul class="footer-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/catalogo.html">Catálogo</a></li>
+            <li><a href="../pages/nosotros.html">Nosotros</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>
+            <li><a href="../pages/comunidad.html">Comunidad</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Columna 2 -->
+      <div class="footer-col footer-center">
+        <img class="footer-map" src="../media/img/index/mapatransparente.png" alt="Mapa de Uruguay">
+        <p class="footer-copy">© 2026 Gastón Jaureguiberry</p>
+      </div>
+
+      <!-- Columna 3 -->
+      <div class="footer-col">
+        <h3>Seguinos en redes</h3>
+        <ul class="footer-redes">
+          <li>
+            <a href="https://www.instagram.com/esa.no.la.tengo/?hl=es-la" target="_blank">
+              <img src="../media/img/index/facebooktransparente.png" alt="Logo Facebook">
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/esa.no.la.tengo/?hl=es-la" target="_blank">
+              <img src="../media/img/index/instagramtransparente.png" alt="Logo Instagram">
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

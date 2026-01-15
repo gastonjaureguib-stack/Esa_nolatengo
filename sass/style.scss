@@ -1,0 +1,19 @@
+
+
+@use "base/reset";
+@use "base/body";
+
+
+@use "layout/header";
+@use "layout/main";
+@use "layout/footer";
+
+@use "layout/maincatalogo";
+@use "layout/maincomunidad";
+@use "layout/maincontacto";
+@use "layout/mainnosotros";
+
+@use "component/responsives";
+
+@use "utilities/variables";
+

@@ -1,0 +1,227 @@
+@use "../utilities/variables";
+
+
+/* ---- Carrusel  ---- */
+
+.catalogo,
+.exoticas {
+  text-align: center; 
+}
+
+.catalogo h2,
+.exoticas h2 {
+ 
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+
+  background-color: rgb(151, 151, 36);
+  color:variables.$color-primary;
+
+  border-radius: 50px;
+}
+
+.catalogo .carousel-inner img,
+.exoticas .carousel-inner img {
+  width: 50%;
+  max-width: 520px;
+  border-radius: 20px;
+}
+
+.exoticas .carousel-inner {
+    text-align: center;
+}
+
+
+
+@media (min-width: 1200px) {
+
+  .catalogo h2,
+  .exoticas h2 {
+    font-size: 30px;
+  }
+
+  .catalogo .carousel-inner img,
+  .exoticas .carousel-inner img {
+    width: 45%;
+  }
+}
+
+
+/* ===== Cards plantas===== */
+.card-plantas {
+    padding: 80px 20px;
+}
+
+/* ===== CONTENEDOR ===== */
+.container-plantas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* ===== PRECIO ===== */
+
+
+.precio {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  background-color: variables.$color-text-light;
+  color:variables.$color-primary;
+
+  padding: 8px 16px;
+  border-radius: 30px;
+
+  font-weight: bold;
+  font-size: 0.9rem;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+
+/* ===== CARD ===== */
+.card {
+  position: relative;
+  background: linear-gradient(180deg, #044, #022);
+  border-radius: 20px;
+  overflow: hidden;
+
+  width: 18rem;
+  color: variables.$color-text-light;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover elegante */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+/* ===== CUERPO ===== */
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+ 
+}
+
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.card h5,
+.card p {
+  color:variables.$color-text-light;
+}
+
+
+/* ===== LISTA ===== */
+.list-group {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-group-item {
+  padding: 12px 20px;
+  font-size: 0.9rem;
+
+  background-color: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+/* ===== BOTÓN ===== */
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+
+  padding: 12px 24px;
+  border-radius: 30px;
+
+  background-color: rgb(151, 151, 36);
+  color: variables.$color-primary;
+  font-weight: bold;
+  text-decoration: none;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-link:hover {
+  background-color: rgb(180, 180, 60);
+  transform: scale(1.05);
+}
+
+
+
+/* ===== SECCIÓN EXÓTICAS ===== */
+.card-exoticas {
+   padding: 80px 20px;
+}
+
+/* ===== CONTENEDOR ===== */
+.card-exoticas .container {
+  display: flex;
+  flex-wrap: wrap;             
+  justify-content: center;      
+  gap: 30px;
+
+  max-width: 1100px;          
+  margin: 0 auto;
+}
+
+
+/* ===== Card exÓticas ===== */
+.card-exoticas .card {
+  width: 18rem;
+    border-radius: 20px;
+  overflow: hidden;
+  color: variables.$color-text-light;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-exoticas .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+
+/* ===== CUERPO ===== */
+.card-exoticas .card-body {
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* ===== BOTÓN ===== */
+.card-exoticas .card-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 26px;
+  border-radius: 30px;
+
+  background-color: rgb(151, 151, 36);
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+
+}

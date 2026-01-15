@@ -1,0 +1,13 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*  columnas: Recordatorio personal */
+    grid-template-rows: auto auto auto;
+    /* Filas: Recordatorio personal  */
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+
+    min-height: 100vh;
+}

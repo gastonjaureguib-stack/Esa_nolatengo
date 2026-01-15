@@ -1,0 +1,899 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*  columnas: Recordatorio personal */
+    grid-template-rows: auto auto auto;
+    /* Filas: Recordatorio personal  */
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+                         Header
+   ===================================================== */
+
+header {
+    text-align: center;       
+    position: relative;       
+                 
+    display: flex;  
+    flex-direction: column;          
+    grid-area: header;        
+    justify-content: center;  
+    align-items: center;      
+    background-image: url("../media/img/index/fondodepantallaparaheader.png"); 
+    background-size: cover;   
+    background-position: right; 
+    height: 70vh;           
+}
+
+/*ESTILO A LA IMAGEN DEL LOGO*/
+.imagenlogo img {
+    width: 350px;           
+    height: auto;
+    position: relative;
+     
+}
+
+.titulo h1 {
+    font-size: 42px;          
+    font-weight: bold;        
+    color: white;           
+}
+
+.titulo {
+  margin-top: 50px;
+}
+
+/*ESTILO AL TEXTO PRINCIPAL*/
+
+.navbar-toggler {
+  border: none;     
+  padding: 0;  
+  background-color: #022;
+  
+  
+}
+
+.navbar-toggler-icon {
+  filter: invert(100%);
+}
+
+.menuburger {
+    background-color: #022;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: rgb(206, 206, 30) !important;
+}
+
+.nav-link.active {
+    background-color: rgb(206, 206, 30) !important;
+    color: #033 !important;
+    border-radius: 20%;
+}
+
+/*Uso de important, porque boostrap no me permite sobreescribir el padding, sugerencia de Chat GPT*/
+
+
+/*=== TITULO PRINCIPAL  ===*/
+
+/* Título principal */
+.tituloprincipal {
+    font-size: 2.4rem;
+    color: white;
+    text-align: center;
+    display: flex;    
+}
+
+/*----- Login ------*/
+
+/*ESTILO A LA CAJA VERDE OSCURA*/
+.loginmenu {
+    position: absolute;           
+    top: 0px;                    
+    right: 40px;                  
+    background-color: #0A3F2D;  
+    padding: 30px;               
+    border-radius: 0 0 20px 20px; 
+}
+
+/*ESTILO A CADA OPCIÓN DENTRO DE LA CAJA VERDE*/
+.opcionmenu {
+    background-color: #F0D54B; 
+    border-radius: 20px;         
+    display: flex;              
+    align-items: center;         
+    justify-content: center;     
+    padding: 6px 14px;           
+    margin-top: 10px;            
+}
+
+/*ESTILO A LAS ETIQUETAS DENTRO DE CADA OPCION AMARILLA*/
+.opcionmenu a {
+    text-decoration: none;     
+    color: #0A3F2D;          
+    font-weight: bold;        
+    padding: 4px 0;            
+}
+
+.login {
+    grid-area: header;
+    background-color: #044;
+    display: flex;
+    padding: 100px 10px;
+    border-radius: 20px;
+    flex-direction: row;
+}
+
+section.login div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+section.login a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    width: 120px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: rgb(151, 151, 36);
+    color: white;
+}
+
+/* =====================================================
+                      Main
+   ===================================================== */
+
+
+
+main {
+ grid-area: main;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #044;
+}
+
+/* ===== CATÁLOGO Main===== */
+.catalogo {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+/* Card individual */
+.catalogo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  background-color: rgb(151, 151, 36);
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 350px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Título */
+.catalogo-titulo {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Imagen */
+.catalogo-img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Caja texto + botón */
+.caja-plantas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Botón catálogo */
+.btn-catalogo {
+  margin-top: 10px;
+  align-self: center;
+
+  text-decoration: none;
+  background-color: #2d6a4f;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 12px;
+}
+
+/* Badge */
+.badge-nuevo {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* ===== COMUNIDAD ===== */
+.comunidad {
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor Comunidad */
+.comunidad-card {
+  background-color: rgb(151, 151, 36);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Imagen */
+.comunidad-img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Título */
+.comunidad-card h2 {
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Párrafo */
+.comunidad-card p {
+  color: #fff;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+/* Primera letra */
+.comunidad-card p::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Botón */
+.btn-comunidad {
+  display: inline-block;
+  color: white;
+  background-color: #044;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 40px;
+  font-weight: bold;
+  margin-top: 30px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.btn-comunidad:hover {
+  background-color: #022;
+}
+
+
+
+/* =====================================================
+                         Footer
+   ===================================================== */
+
+footer {
+    grid-area: footer;
+    background-color: #033;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+
+
+/* ===== GRID DE 3 COLUMNAS ===== */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: start;
+    position: relative;
+}
+
+/* Columnas */
+.footer-col {
+    padding: 0 20px;
+    position: relative;
+    min-height: 250px;
+    
+}
+
+/* Líneas blancas entre columnas */
+.footer-col:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    opacity: 0.3;
+    
+}
+
+/* Títulos */
+.footer-col h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* ===== Lista de enlaces columna 1 ===== */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Columna 2: mapa + texto ===== */
+
+.footer-map {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 15px;
+}
+.footer-center {
+    text-align: center;
+}
+
+.footer-copy {
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* ===== Columna 3: redes sociales ===== */
+.footer-redes {
+    list-style: none;
+    padding: 20px;
+}
+
+.footer-redes li {
+    margin-bottom: 10px;
+}
+
+.footer-redes img {
+    width: 22px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.footer-redes a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-redes a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===== BOTÓN FLOTANTE WHATSAPP ===== */
+
+.wpbottom {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  }
+
+
+.wpbottom img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    }
+
+
+
+/* =====================================================
+                Página catalogo
+   ===================================================== */
+
+/* ---- Carrusel  ---- */
+
+.catalogo,
+.exoticas {
+  text-align: center; 
+}
+
+.catalogo h2,
+.exoticas h2 {
+ 
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+
+  background-color: rgb(151, 151, 36);
+  color: #044;
+
+  border-radius: 50px;
+}
+
+.catalogo .carousel-inner img,
+.exoticas .carousel-inner img {
+  width: 50%;
+  max-width: 520px;
+  border-radius: 20px;
+}
+
+.exoticas .carousel-inner {
+    text-align: center;
+}
+
+
+
+@media (min-width: 1200px) {
+
+  .catalogo h2,
+  .exoticas h2 {
+    font-size: 30px;
+  }
+
+  .catalogo .carousel-inner img,
+  .exoticas .carousel-inner img {
+    width: 45%;
+  }
+}
+
+
+/* ===== Cards plantas===== */
+.card-plantas {
+    padding: 80px 20px;
+}
+
+/* ===== CONTENEDOR ===== */
+.container-plantas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* ===== PRECIO ===== */
+
+
+.precio {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  background-color: white;
+  color: #033;
+
+  padding: 8px 16px;
+  border-radius: 30px;
+
+  font-weight: bold;
+  font-size: 0.9rem;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+
+/* ===== CARD ===== */
+.card {
+  position: relative;
+  background: linear-gradient(180deg, #044, #022);
+  border-radius: 20px;
+  overflow: hidden;
+
+  width: 18rem;
+  color: #fff;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover elegante */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+/* ===== CUERPO ===== */
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+ 
+}
+
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.card h5,
+.card p {
+  color: #fff;
+}
+
+
+/* ===== LISTA ===== */
+.list-group {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-group-item {
+  padding: 12px 20px;
+  font-size: 0.9rem;
+
+  background-color: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+/* ===== BOTÓN ===== */
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+
+  padding: 12px 24px;
+  border-radius: 30px;
+
+  background-color: rgb(151, 151, 36);
+  color: #033;
+  font-weight: bold;
+  text-decoration: none;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-link:hover {
+  background-color: rgb(180, 180, 60);
+  transform: scale(1.05);
+}
+
+
+
+/* ===== SECCIÓN EXÓTICAS ===== */
+.card-exoticas {
+   padding: 80px 20px;
+}
+
+/* ===== CONTENEDOR ===== */
+.card-exoticas .container {
+  display: flex;
+  flex-wrap: wrap;             
+  justify-content: center;      
+  gap: 30px;
+
+  max-width: 1100px;          
+  margin: 0 auto;
+}
+
+
+/* ===== Card exÓticas ===== */
+.card-exoticas .card {
+  width: 18rem;
+    border-radius: 20px;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-exoticas .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+
+/* ===== CUERPO ===== */
+.card-exoticas .card-body {
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* ===== BOTÓN ===== */
+.card-exoticas .card-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 26px;
+  border-radius: 30px;
+
+  background-color: rgb(151, 151, 36);
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+
+}
+/* =====================================================
+               Pagina Nosotros
+   ===================================================== */
+.nosotros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.nosotros img {
+    border-radius: 20px;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.margarita {
+    background-color: rgb(151, 151, 36);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.margarita p {
+    margin-top: 20px;
+}
+
+.tomas {
+    background-color: rgb(151, 151, 36);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tomas p {
+    margin-top: 20px;
+}
+
+
+/* ===== Título contacto ===== */
+.titulocontacto {
+    text-align: center;
+    background-color: rgb(151, 151, 36);
+    color: #044;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* ===== Contenedor principal ===== */
+.contacto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas: imagen, texto, mapa */
+    gap: 20px;
+    align-items: center; 
+    padding: 0 20px 20px 20px;
+}
+
+
+/* ===== Imagen ===== */
+.contacto-img {
+    width: 60%;
+    border-radius: 15px;
+}
+
+/* ===== Datos de contacto ===== */
+.contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto ul li {
+    margin-bottom: 10px;
+    color: white;
+    text-align: start;
+}
+
+.contacto ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ===== Mapa ===== */
+
+.mapa {
+    width: 100%;        
+    max-width: 400px;   
+    height: 300px;      
+    overflow: hidden;   
+}
+
+.mapa iframe {
+    width: 100%;      
+    height: 100%;      
+    border: 0;         
+}
+
+
+/* =====================================================
+                     página comunidad
+   ===================================================== */
+
+.comunidadplantil{
+  display: flex;
+  flex-direction: column-reverse;
+  
+}
+
+.comunidadplantil img {
+  width: 100%;
+  height: auto; 
+  max-height: 800px;
+  object-fit: cover; 
+  border-radius: 40px;
+}
+
+.textoscomunidad h3{
+    color: rgb(151, 151, 36);
+   text-align: center;
+    margin-top: 30px;
+    background-color: rgb(7, 39, 13);
+    border-radius: 20px;
+
+ }
+.textoscomunidad p{
+  color: white;
+  font-style: italic;
+  
+}
+
+.textoscomunidad p::first-letter  {
+  font-size: 2rem;
+}
+
+
+/* =====================================================
+              Responsives
+   ===================================================== */
+
+/* ===== Footer responsive ===== */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* columnas se apilan */
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-col {
+        padding: 10px 0;
+    }
+
+    
+    .footer-col::after {
+        display: none;
+    }
+
+    .footer-redes {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    .footer-map {
+        margin: 0 auto 10px;
+        max-width: 100%;
+    }
+}
+/* ===============================
+   CONTACTO RESPONSIVE
+   =============================== */
+
+@media (max-width: 768px) {
+
+  .contacto {
+    grid-template-columns: 1fr; /* 1 sola columna */
+    gap: 30px;
+    text-align: center;
+  }
+
+  .contacto-img {
+    width: 100%;      /* antes 60% */
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .contacto ul {
+    text-align: center;
+  }
+
+  .mapa {
+    max-width: 100%;
+    height: 250px;
+    margin: 0 auto;
+  }
+}
+
+/* ===============================
+   Login de inicio
+   =============================== */
+
+@media (max-width: 768px) {
+  .imagenlogo {
+    margin-top: 70px;
+  }
+
+  .loginmenu {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .catalogo {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo{
+    margin-top: 30px;
+
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 80vh;
+
+  }
+}

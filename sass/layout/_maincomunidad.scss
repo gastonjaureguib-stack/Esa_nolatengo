@@ -1,0 +1,35 @@
+@use "../utilities/variables";
+
+.comunidadplantil{
+  display: flex;
+  flex-direction: column-reverse;
+  
+}
+
+.comunidadplantil img {
+  width: 100%;
+  height: auto; 
+  max-height: 800px;
+  object-fit: cover; 
+  border-radius: 40px;
+}
+
+.textoscomunidad h3{
+    color: rgb(151, 151, 36);
+   text-align: center;
+    margin-top: 30px;
+    background-color: rgb(7, 39, 13);
+    border-radius: 20px;
+
+ }
+.textoscomunidad p{
+  color: variables.$color-text-light;
+  font-style: italic;
+  
+}
+
+.textoscomunidad p::first-letter  {
+  font-size: 2rem;
+}
+
+

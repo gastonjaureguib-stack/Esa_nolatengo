@@ -1,0 +1,134 @@
+@use "../utilities/variables";
+
+main {
+ grid-area: main;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #044;
+}
+
+/* ===== CATÁLOGO Main===== */
+.catalogo {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+/* Card individual */
+.catalogo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  background-color: rgb(151, 151, 36);
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 350px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Título */
+.catalogo-titulo {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Imagen */
+.catalogo-img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Caja texto + botón */
+.caja-plantas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Botón catálogo */
+.btn-catalogo {
+  margin-top: 10px;
+  align-self: center;
+
+  text-decoration: none;
+  background-color: #2d6a4f;
+  color: variables.$color-text-light;
+  padding: 8px 16px;
+  border-radius: 12px;
+}
+
+/* Badge */
+.badge-nuevo {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* ===== COMUNIDAD ===== */
+.comunidad {
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor Comunidad */
+.comunidad-card {
+  background-color: rgb(151, 151, 36);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Imagen */
+.comunidad-img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Título */
+.comunidad-card h2 {
+  color:variables.$color-text-light;
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Párrafo */
+.comunidad-card p {
+  color:variables.$color-text-light;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+/* Primera letra */
+.comunidad-card p::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Botón */
+.btn-comunidad {
+  display: inline-block;
+  color: variables.$color-text-light;
+  background-color:variables.$color-primary;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 40px;
+  font-weight: bold;
+  margin-top: 30px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.btn-comunidad:hover {
+  background-color: variables.$color-primary;
+}

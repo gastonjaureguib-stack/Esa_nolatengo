@@ -1,0 +1,39 @@
+@use "../utilities/variables";
+
+.nosotros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.nosotros img {
+    border-radius: 20px;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.margarita {
+    background-color: rgb(151, 151, 36);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.margarita p {
+    margin-top: 20px;
+}
+
+.tomas {
+    background-color: rgb(151, 151, 36);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tomas p {
+    margin-top: 20px;
+}
+
+

@@ -1,0 +1,60 @@
+@use "../utilities/variables";
+
+
+/* ===== Título contacto ===== */
+.titulocontacto {
+    text-align: center;
+    background-color: rgb(151, 151, 36);
+    color: #044;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* ===== Contenedor principal ===== */
+.contacto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas: imagen, texto, mapa */
+    gap: 20px;
+    align-items: center; 
+    padding: 0 20px 20px 20px;
+}
+
+
+/* ===== Imagen ===== */
+.contacto-img {
+    width: 60%;
+    border-radius: 15px;
+}
+
+/* ===== Datos de contacto ===== */
+.contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto ul li {
+    margin-bottom: 10px;
+    color: white;
+    text-align: start;
+}
+
+.contacto ul li a {
+    color: variables.$color-text-light;
+    text-decoration: none;
+}
+
+/* ===== Mapa ===== */
+
+.mapa {
+    width: 100%;        
+    max-width: 400px;   
+    height: 300px;      
+    overflow: hidden;   
+}
+
+.mapa iframe {
+    width: 100%;      
+    height: 100%;      
+    border: 0;         
+}
