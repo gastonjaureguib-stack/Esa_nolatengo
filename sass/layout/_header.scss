@@ -1,19 +1,20 @@
 @use "../utilities/variables";
+@use "../utilities/mixins";
 
 header {
     text-align: center;       
     position: relative;       
-                 
-    display: flex;  
-    flex-direction: column;          
-    grid-area: header;        
-    justify-content: center;  
-    align-items: center;      
+    grid-area: header;  
+        
+ @include mixins.flex-center(column);
+
+
     background-image: url("../media/img/index/fondodepantallaparaheader.png"); 
     background-size: cover;   
     background-position: right; 
     height: 70vh;           
 }
+
 
 /*ESTILO A LA IMAGEN DEL LOGO*/
 .imagenlogo img {
@@ -26,7 +27,7 @@ header {
 .titulo h1 {
     font-size: 42px;          
     font-weight: bold;        
-    color: variables.$color-text-light;           
+    color: variables.$blanco;           
 }
 
 .titulo {
@@ -38,9 +39,8 @@ header {
 .navbar-toggler {
   border: none;     
   padding: 0;  
-  background-color: variables.$color-primary-dark;
-  
-  
+  background-color: variables.$verde-muy-oscuro;
+ 
 }
 
 .navbar-toggler-icon {
@@ -48,22 +48,22 @@ header {
 }
 
 .menuburger {
-    background-color:variables.$color-primary-dark;
+    background-color:variables.$verde-muy-oscuro;
     border-radius: 20px;
     margin-top: 30px;
 }
 
 .nav-link {
-    color:variables.$color-text-light !important;
+    color:variables.$blanco !important;
 }
 
 .nav-link:hover {
-    color: rgb(206, 206, 30) !important;
+    color: variables.$amarillo-hover !important;
 }
 
 .nav-link.active {
-    background-color:variables.$color-secondary !important;
-    color: variables.$color-primary !important;
+    background-color:variables.$verde-muy-oscuro !important;
+    color: variables.$verde-oscuro !important;
     border-radius: 20%;
 }
 
@@ -75,7 +75,7 @@ header {
 /* Título principal */
 .tituloprincipal {
     font-size: 2.4rem;
-    color: variables.$color-text-light;
+    color: variables.$blanco;
     text-align: center;
     display: flex;    
 }
@@ -87,18 +87,18 @@ header {
     position: absolute;           
     top: 0px;                    
     right: 40px;                  
-    background-color:variables.$color-primary;  
+    background-color:variables.$verde-oscuro;  
     padding: 30px;               
     border-radius: 0 0 20px 20px; 
 }
 
 /*ESTILO A CADA OPCIÓN DENTRO DE LA CAJA VERDE*/
 .opcionmenu {
-    background-color: #F0D54B; 
+    background-color: variables.$amarillo-principal; 
     border-radius: 20px;         
-    display: flex;              
-    align-items: center;         
-    justify-content: center;     
+   
+  @include mixins.flex-center;
+    
     padding: 6px 14px;           
     margin-top: 10px;            
 }
@@ -106,19 +106,22 @@ header {
 /*ESTILO A LAS ETIQUETAS DENTRO DE CADA OPCION AMARILLA*/
 .opcionmenu a {
     text-decoration: none;     
-    color: variables.$color-primary;         
+    color:variables.$verde-oscuro;         
     font-weight: bold;        
     padding: 4px 0;            
 }
 
 .login {
     grid-area: header;
-    background-color: variables.$color-primary;
+    background-color:variables.$verde-oscuro;
     display: flex;
     padding: 100px 10px;
     border-radius: 20px;
-    flex-direction: row;
+  @include mixins.flex-center;
+
 }
+
+
 
 section.login div {
     display: flex;
@@ -133,6 +136,6 @@ section.login a {
     width: 120px;
     border-radius: 10px;
     text-decoration: none;
-    background-color: rgb(151, 151, 36);
-    color: variables.$color-text-light;
+    background-color:variables.$amarillo-hover;
+    color: variables.$blanco;
 }

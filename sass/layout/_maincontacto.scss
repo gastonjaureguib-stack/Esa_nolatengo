@@ -1,11 +1,11 @@
 @use "../utilities/variables";
-
+@use "../utilities/mixins";
 
 /* ===== Título contacto ===== */
 .titulocontacto {
     text-align: center;
-    background-color: rgb(151, 151, 36);
-    color: #044;
+    background-color: variables.$amarillo-hover;
+    color: variables.$verde-muy-oscuro;
     font-weight: bold;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -35,12 +35,12 @@
 
 .contacto ul li {
     margin-bottom: 10px;
-    color: white;
+    color:variables.$blanco;
     text-align: start;
 }
 
 .contacto ul li a {
-    color: variables.$color-text-light;
+    color: variables.$blanco;
     text-decoration: none;
 }
 

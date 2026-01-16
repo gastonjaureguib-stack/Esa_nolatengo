@@ -1,4 +1,7 @@
 @use "../utilities/variables";
+@use "../utilities/mixins";
+
+
 
 .nosotros {
     display: grid;
@@ -14,22 +17,14 @@
     margin-bottom: 15px;
 }
 
-.margarita {
-    background-color: rgb(151, 151, 36);
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
+.margarita,
+.tomas {
+  @include mixins.card-base(variables.$amarillo-hover);
+  margin-bottom: 20px;
 }
 
 .margarita p {
     margin-top: 20px;
-}
-
-.tomas {
-    background-color: rgb(151, 151, 36);
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
 }
 
 .tomas p {

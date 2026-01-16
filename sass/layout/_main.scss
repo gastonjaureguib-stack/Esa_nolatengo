@@ -1,33 +1,33 @@
 @use "../utilities/variables";
+@use "../utilities/mixins";
+
+
 
 main {
  grid-area: main;
   padding: 40px;
-  display: flex;
-  flex-direction: column;
+  @include mixins.flex-center(column);
   gap: 40px;
-  background-color: #044;
+  background-color: variables.$verde-oscuro;
 }
 
 /* ===== CATÁLOGO Main===== */
 .catalogo {
-  display: flex;
-  justify-content: center;
+  @include mixins.flex-center;
   gap: 100px;
   flex-wrap: wrap;
+
 }
 
 /* Card individual */
 .catalogo-card {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 
-  background-color: rgb(151, 151, 36);
-  border-radius: 20px;
-  padding: 20px;
+  @include mixins.card-base(variables.$amarillo-principal);
+  @include mixins.flex-center(column);
+  gap: 15px;
   max-width: 350px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+
+
 }
 
 /* Título */
@@ -52,15 +52,13 @@ main {
 
 /* Botón catálogo */
 .btn-catalogo {
+
+  @include mixins.boton(#2d6a4f);
   margin-top: 10px;
   align-self: center;
-
-  text-decoration: none;
-  background-color: #2d6a4f;
-  color: variables.$color-text-light;
-  padding: 8px 16px;
-  border-radius: 12px;
+  border-radius: 12px; // si querés distinto
 }
+
 
 /* Badge */
 .badge-nuevo {
@@ -70,21 +68,18 @@ main {
 
 /* ===== COMUNIDAD ===== */
 .comunidad {
-  display: flex;
-  justify-content: center;
+ 
+  @include mixins.flex-center;
+
 }
 
 /* Contenedor Comunidad */
 .comunidad-card {
-  background-color: rgb(151, 151, 36);
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  max-width: 800px;
 
-  display: flex;
-  flex-direction: column;
+  @include mixins.card-base(variables.$amarillo-principal);
+  @include mixins.flex-center(column);
   gap: 15px;
+  max-width: 800px;
 }
 
 /* Imagen */
@@ -96,14 +91,14 @@ main {
 
 /* Título */
 .comunidad-card h2 {
-  color:variables.$color-text-light;
+  color:variables.$blanco;
   margin: 0;
   font-size: 2rem;
 }
 
 /* Párrafo */
 .comunidad-card p {
-  color:variables.$color-text-light;
+  color:variables.$blanco;
   margin: 0;
   line-height: 1.6;
   font-weight: bold;
@@ -116,19 +111,15 @@ main {
 }
 
 /* Botón */
-.btn-comunidad {
+ .btn-comunidad {
+  @include mixins.boton(variables.$verde-oscuro);
   display: inline-block;
-  color: variables.$color-text-light;
-  background-color:variables.$color-primary;
-  text-decoration: none;
-  padding: 10px 22px;
-  border-radius: 40px;
-  font-weight: bold;
+  border-radius: 40px; // override del mixin
   margin-top: 30px;
-  transition: 0.3s;
   text-align: center;
+
 }
 
 .btn-comunidad:hover {
-  background-color: variables.$color-primary;
+  background-color: variables.$verde-oscuro;
 }

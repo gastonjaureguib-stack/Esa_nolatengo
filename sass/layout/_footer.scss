@@ -2,7 +2,8 @@
 
 footer {
     grid-area: footer;
-    background-color: #033;
+    background-color:variables.$verde-oscuro;
+
     padding: 50px 20px;
     display: flex;
     justify-content: center;
@@ -32,7 +33,6 @@ footer {
 
 /* Líneas blancas entre columnas */
 .footer-col:not(:last-child)::after {
-    content: "";
     position: absolute;
     right: 0;
     top: 0;
@@ -60,7 +60,7 @@ footer {
 }
 
 .footer-links a {
-    color: white;
+    color: variables.$blanco;
     text-decoration: none;
 }
 
@@ -101,7 +101,7 @@ footer {
 }
 
 .footer-redes a {
-    color: white;
+    color: variables.$blanco;
     text-decoration: none;
 }
 

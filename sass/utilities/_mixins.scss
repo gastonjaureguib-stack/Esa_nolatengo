@@ -1,0 +1,28 @@
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@mixin card-base($bg) {
+  background-color: $bg;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+
+@mixin boton($bg, $color: white) {
+  background-color: $bg;
+  color: $color;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+
