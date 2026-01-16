@@ -1,5 +1,7 @@
 @use "../utilities/variables";
 @use "../utilities/mixins";
+@use "../utilities/animations";
+
 
 
 
@@ -65,6 +67,16 @@ main {
   font-size: 0.9rem;
   font-weight: bold;
 }
+
+
+/* ===== Boton animacion ===== */
+.adopte-img {
+  border-radius: 10px
+}
+
+
+
+
 
 /* ===== COMUNIDAD ===== */
 .comunidad {

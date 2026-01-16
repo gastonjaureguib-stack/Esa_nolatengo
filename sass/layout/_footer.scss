@@ -1,16 +1,16 @@
 @use "../utilities/variables";
+@use "../utilities/mixins";
 
 footer {
-    grid-area: footer;
-    background-color:variables.$verde-oscuro;
-
-    padding: 50px 20px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
+  grid-area: footer;
+  background-color: variables.$verde-oscuro;
+  padding: 50px 20px;
+  @include mixins.flex-center(row);
+  text-align: center;
+  color: variables.$blanco;
+  position: relative;
 }
+
 
 
 
@@ -38,7 +38,7 @@ footer {
     top: 0;
     width: 1px;
     height: 100%;
-    background-color: white;
+    background-color:variables.$blanco;
     opacity: 0.3;
     
 }
