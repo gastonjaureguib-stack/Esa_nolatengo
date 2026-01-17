@@ -2,15 +2,12 @@
 @use "../utilities/mixins";
 @use "../utilities/animations";
 
-
-
-
 main {
  grid-area: main;
   padding: 40px;
   @include mixins.flex-center(column);
   gap: 40px;
-  background-color: variables.$verde-oscuro;
+  background-color:variables.$verde-oscuro;
 }
 
 /* ===== CATÁLOGO Main===== */
@@ -69,13 +66,7 @@ main {
 }
 
 
-/* ===== Boton animacion ===== */
-.adopte-img {
-  border-radius: 10px
-}
-
-
-
+/* ===== Boton animación ===== */
 
 
 /* ===== COMUNIDAD ===== */

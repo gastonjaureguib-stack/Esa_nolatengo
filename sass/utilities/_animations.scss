@@ -1,21 +1,19 @@
-@use "utilities/variables";
-@use "utilities/mixins";
 
-/* Estilo para que la imagen sea un botón */
-.adopte-img {
-  cursor: pointer; /* Cambia el cursor al pasar por encima */
-  display: inline-block;
-  animation: aparecer 1s ease forwards; /* Aplica la animación */
-}
 
-/* Animación keyframe para aparecer */
-@keyframes aparecer {
+@keyframes adopte {
   0% {
-    opacity: 0;
-    transform: scale(0.8); /* Empieza más pequeña */
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(12px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-12px);
   }
   100% {
-    opacity: 1;
-    transform: scale(1); /* Termina tamaño normal */
+    transform: translateX(0);
   }
 }
