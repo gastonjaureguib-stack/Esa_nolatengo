@@ -22,31 +22,51 @@
   border-radius: 50px;
 }
 
-.catalogo .carousel-inner img,
-.exoticas .carousel-inner img {
-  width: 50%;
-  max-width: 520px;
-  border-radius: 20px;
+.catalogo .carousel-inner,
+.exoticas .carousel-inner {
+  max-width: 900px;     // ancho acorde a la página
+  margin: 0 auto;       // centrado
 }
 
-.exoticas .carousel-inner {
-    text-align: center;
+.catalogo .carousel-inner img,
+.exoticas .carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.catalogo .carousel-item,
+.exoticas .carousel-item {
+  height: 220px;     
+}
+
+.catalogo .carousel-item,
+.exoticas .carousel-item {
+  overflow: hidden;
 }
 
 
 
 @media (min-width: 1200px) {
+  .catalogo .carousel-inner,
+  .exoticas .carousel-inner {
+    max-width: 1000px;
+  }
 
-  .catalogo h2,
-  .exoticas h2 {
-    font-size: 30px;
+  .catalogo .carousel-item,
+  .exoticas .carousel-item {
+    height: 480px;     
   }
 
   .catalogo .carousel-inner img,
   .exoticas .carousel-inner img {
-    width: 45%;
+    border-radius: 20px;
   }
 }
+
+
+
 
 
 /* ===== Cards plantas===== */
