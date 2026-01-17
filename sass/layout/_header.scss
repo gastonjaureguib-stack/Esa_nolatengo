@@ -22,7 +22,8 @@ header {
 
 /*ESTILO A LA IMAGEN DEL LOGO*/
 .imagenlogo img {
-    width: 350px;           
+    
+    width: 65%;           
     height: auto;
     position: relative;
      
@@ -31,7 +32,7 @@ header {
 .titulo h1 {
     font-size: 42px;          
     font-weight: bold;        
-    color:red;          
+    color:variables.$blanco;          
 }
 
 .titulo {

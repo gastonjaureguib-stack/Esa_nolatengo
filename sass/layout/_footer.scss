@@ -74,7 +74,9 @@ footer {
   width: 100%;
   max-width: 200px;
   margin: 0 auto 15px;
+ 
 }
+
 .footer-center {
     text-align: center;
 }
@@ -110,17 +112,3 @@ footer {
 }
 
 
-/* ===== BOTÓN FLOTANTE WHATSAPP ===== */
-
-.wpbottom {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  }
-
-
-.wpbottom img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    }
