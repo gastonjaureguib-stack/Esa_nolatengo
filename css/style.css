@@ -105,8 +105,8 @@ header {
 }
 
 .nav-link.active {
-  background-color: #022 !important;
-  color: #044 !important;
+  background-color: rgb(151, 151, 36) !important;
+  color: #022 !important;
   border-radius: 20%;
 }
 
@@ -327,19 +327,6 @@ main {
 }
 
 /* ===== BOTÓN FLOTANTE WHATSAPP ===== */
-/*.wpbottom {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99999;
-  }
-
-
-.wpbottom img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    }*/
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
