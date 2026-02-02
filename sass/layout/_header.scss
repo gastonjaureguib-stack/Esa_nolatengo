@@ -41,16 +41,16 @@ header {
 
 /*ESTILO AL TEXTO PRINCIPAL*/
 
+
 .navbar-toggler {
   border: none;     
-  padding: 0;  
-  background-color: variables.$verde-oscuro;
- 
+  padding: 0;   
+}
+.navbar-toggler-icon {
+    filter: invert(1); 
 }
 
-.navbar-toggler-icon {
-  filter: invert(100%);
-}
+ 
 
 .menuburger {
     background-color:variables.$verde-oscuro;
@@ -59,7 +59,7 @@ header {
 }
 
 .nav-link {
-    color:variables.$blanco !important;
+    color:variables.$amarillo-principal !important;
 }
 
 .nav-link:hover {
@@ -68,9 +68,35 @@ header {
 
 .nav-link.active {
     background-color: variables.$amarillo-principal !important;
-    color: variables.$verde-muy-oscuro !important;
-    border-radius: 20%;
+    color: variables.$verde-oscuro !important;
+    border-radius: 10px;
 }
+
+
+
+
+/* Submenu del catálogo */
+
+.navbar .dropdown-menu {
+    background-color: variables.$verde-oscuro;  
+    border-radius: 10px;
+    padding: 10px 0;
+    margin-top: 0; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: variables.$amarillo-principal;  
+    padding: 8px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: variables.$amarillo-principal;  
+    color: variables.$verde-oscuro;                  
+    border-radius: 5px;
+}
+
 
 
 /*=== TITULO PRINCIPAL  ===*/
