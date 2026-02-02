@@ -1,50 +1,54 @@
 /* =====================================================
-              Responsives
+   RESPONSIVE – TABLET & MOBILE
    ===================================================== */
 
-/* ===== Footer responsive ===== */
 @media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr; /* columnas se apilan */
-        gap: 20px;
-        text-align: center;
-    }
 
-    .footer-col {
-        padding: 10px 0;
-    }
+  /* ================= HEADER ================= */
 
-    
-    .footer-col::after {
-        display: none;
-    }
+  header {
+    height: 80vh;
+    justify-content: flex-start;
+  }
 
-    .footer-redes {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        padding: 10px 0;
-    }
+  .imagenlogo {
+    margin-top: 70px;
+  }
 
-    .footer-map {
-        margin: 0 auto 10px;
-        max-width: 100%;
-    }
-}
-/* ===============================
-   CONTACTO RESPONSIVE
-   =============================== */
+  .titulo {
+    margin-top: 30px;
+  }
 
-@media (max-width: 768px) {
+  .loginmenu {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    transform: none;
+    border-radius: 0 0 20px 20px;
+
+    z-index: 10;
+    order: -1;
+  }
+
+  /* ================= CATÁLOGO ================= */
+
+  .catalogo {
+    gap: 50px;
+  }
+
+  /* ================= CONTACTO ================= */
 
   .contacto {
-    grid-template-columns: 1fr; /* 1 sola columna */
+    grid-template-columns: 1fr;
     gap: 30px;
     text-align: center;
   }
 
   .contacto-img {
-    width: 100%;      /* antes 60% */
+    width: 100%;
     max-width: 320px;
     margin: 0 auto;
   }
@@ -58,51 +62,33 @@
     height: 250px;
     margin: 0 auto;
   }
-}
 
-/* ===============================
-   Login de inicio
-   =============================== */
+  /* ================= FOOTER ================= */
 
-@media (max-width: 768px) {
-  .imagenlogo {
-    margin-top: 70px;
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
   }
 
-  .loginmenu {
-    position: sticky;      
-    top: 0;
-    left: 0;
-    right: 0;
-
-    width: 100%;
-    transform: none;
-    border-radius: 0 0 20px 20px;
-
-    z-index: 10;
-    order: -1;
+  .footer-col {
+    padding: 10px 0;
   }
-}
 
-
-@media (max-width: 768px) {
-
-  .catalogo {
-    gap: 50px;
+  .footer-col::after {
+    display: none;
   }
-}
 
-@media (max-width: 768px) {
-  .titulo{
-    margin-top: 30px;
-
+  .footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
   }
-}
 
-@media (max-width: 768px) {
-  header {
-    height: 80vh;
-    justify-content: flex-start; 
+  .footer-map {
+    margin: 0 auto 10px;
+    max-width: 100%;
   }
-}
 
+}

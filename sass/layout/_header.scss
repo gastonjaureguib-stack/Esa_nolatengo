@@ -1,6 +1,5 @@
 @use "../utilities/variables";
 @use "../utilities/mixins";
-@use "../utilities/animations";
 
 
 
@@ -73,8 +72,6 @@ header {
     border-radius: 20%;
 }
 
-/*Uso de important, porque boostrap no me permite sobreescribir el padding, sugerencia de Chat GPT*/
-
 
 /*=== TITULO PRINCIPAL  ===*/
 
@@ -120,7 +117,6 @@ header {
 .login {
     grid-area: header;
     background-color:variables.$verde-oscuro;
-    display: flex;
     padding: 100px 10px;
     border-radius: 20px;
   @include mixins.flex-center;

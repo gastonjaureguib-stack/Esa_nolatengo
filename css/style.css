@@ -8,7 +8,7 @@
 
 body {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   /*  columnas: Recordatorio personal */
   grid-template-rows: auto auto auto;
   /* Filas: Recordatorio personal  */
@@ -17,37 +17,6 @@ body {
 }
 
 /*Colores base*/
-@keyframes plantita-viva {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(4deg) scale(1.015);
-  }
-  100% {
-    transform: rotate(0deg) scale(1);
-  }
-}
-.plantita-wp {
-  animation: plantita-viva 5s ease-in-out infinite;
-  transform-origin: center bottom;
-}
-
-@keyframes footermap {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.footer-map {
-  animation: footermap 3s ease-in-out infinite;
-}
-
 header {
   text-align: center;
   position: relative;
@@ -110,7 +79,6 @@ header {
   border-radius: 20%;
 }
 
-/*Uso de important, porque boostrap no me permite sobreescribir el padding, sugerencia de Chat GPT*/
 /*=== TITULO PRINCIPAL  ===*/
 /* Título principal */
 .tituloprincipal {
@@ -154,7 +122,6 @@ header {
 .login {
   grid-area: header;
   background-color: #044;
-  display: flex;
   padding: 100px 10px;
   border-radius: 20px;
   display: flex;
@@ -178,6 +145,37 @@ section.login a {
   text-decoration: none;
   background-color: rgb(180, 180, 60);
   color: #fff;
+}
+
+@keyframes plantita-viva {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(4deg) scale(1.015);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+.plantita-wp {
+  animation: plantita-viva 5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes footermap {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.footer-map {
+  animation: footermap 3s ease-in-out infinite;
 }
 
 main {
@@ -323,7 +321,7 @@ main {
 }
 
 .btn-comunidad:hover {
-  background-color: #044;
+  filter: brightness(1.1);
 }
 
 /* ===== BOTÓN FLOTANTE WHATSAPP ===== */
@@ -493,11 +491,6 @@ footer {
 
 .catalogo .carousel-item,
 .exoticas .carousel-item {
-  height: 220px;
-}
-
-.catalogo .carousel-item,
-.exoticas .carousel-item {
   overflow: hidden;
 }
 
@@ -505,10 +498,6 @@ footer {
   .catalogo .carousel-inner,
   .exoticas .carousel-inner {
     max-width: 1000px;
-  }
-  .catalogo .carousel-item,
-  .exoticas .carousel-item {
-    height: 480px;
   }
   .catalogo .carousel-inner img,
   .exoticas .carousel-inner img {
@@ -528,8 +517,6 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -767,7 +754,6 @@ footer {
 .nosotros img {
   border-radius: 20px;
   width: 100%;
-  border-radius: 20px;
   margin-bottom: 15px;
 }
 
@@ -789,12 +775,57 @@ footer {
 }
 
 /* =====================================================
-              Responsives
+   RESPONSIVE – TABLET & MOBILE
    ===================================================== */
-/* ===== Footer responsive ===== */
 @media (max-width: 768px) {
+  /* ================= HEADER ================= */
+  header {
+    height: 80vh;
+    justify-content: flex-start;
+  }
+  .imagenlogo {
+    margin-top: 70px;
+  }
+  .titulo {
+    margin-top: 30px;
+  }
+  .loginmenu {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: none;
+    border-radius: 0 0 20px 20px;
+    z-index: 10;
+    order: -1;
+  }
+  /* ================= CATÁLOGO ================= */
+  .catalogo {
+    gap: 50px;
+  }
+  /* ================= CONTACTO ================= */
+  .contacto {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  .contacto-img {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .contacto ul {
+    text-align: center;
+  }
+  .mapa {
+    max-width: 100%;
+    height: 250px;
+    margin: 0 auto;
+  }
+  /* ================= FOOTER ================= */
   .footer-grid {
-    grid-template-columns: 1fr; /* columnas se apilan */
+    grid-template-columns: 1fr;
     gap: 20px;
     text-align: center;
   }
@@ -813,64 +844,6 @@ footer {
   .footer-map {
     margin: 0 auto 10px;
     max-width: 100%;
-  }
-}
-/* ===============================
-   CONTACTO RESPONSIVE
-   =============================== */
-@media (max-width: 768px) {
-  .contacto {
-    grid-template-columns: 1fr; /* 1 sola columna */
-    gap: 30px;
-    text-align: center;
-  }
-  .contacto-img {
-    width: 100%; /* antes 60% */
-    max-width: 320px;
-    margin: 0 auto;
-  }
-  .contacto ul {
-    text-align: center;
-  }
-  .mapa {
-    max-width: 100%;
-    height: 250px;
-    margin: 0 auto;
-  }
-}
-/* ===============================
-   Login de inicio
-   =============================== */
-@media (max-width: 768px) {
-  .imagenlogo {
-    margin-top: 70px;
-  }
-  .loginmenu {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    transform: none;
-    border-radius: 0 0 20px 20px;
-    z-index: 10;
-    order: -1;
-  }
-}
-@media (max-width: 768px) {
-  .catalogo {
-    gap: 50px;
-  }
-}
-@media (max-width: 768px) {
-  .titulo {
-    margin-top: 30px;
-  }
-}
-@media (max-width: 768px) {
-  header {
-    height: 80vh;
-    justify-content: flex-start;
   }
 }
 
