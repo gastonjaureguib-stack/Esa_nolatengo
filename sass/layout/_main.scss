@@ -153,16 +153,25 @@ main {
   }
 }
 
-.wpbottom img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    transition: filter 0.3s ease;
-  }
 
-.plantita-wp {
-  width: 150px;
-  height: auto;
-  margin-right: -50px;
-  vertical-align: bottom;
+.wpbottom {
+  display: flex;
+  align-items: center;
+  gap: 6px; 
 }
+
+/* Plantita */
+.plantita-wp {
+  width: 150px;  
+  height: auto;
+  animation: plantita-viva 5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+/* Botón WhatsApp */
+.logo-wp {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
