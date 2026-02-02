@@ -118,7 +118,7 @@ main {
  .btn-comunidad {
   @include mixins.boton(variables.$verde-oscuro);
   display: inline-block;
-  border-radius: 40px; 
+  border-radius: 12px; 
   margin-top: 30px;
   text-align: center;
 
