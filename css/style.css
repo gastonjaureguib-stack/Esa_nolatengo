@@ -258,6 +258,10 @@ main {
   gap: 10px;
 }
 
+.caja-plantas h3 {
+  color: #fff;
+}
+
 /* Botón catálogo */
 .btn-catalogo {
   background-color: #044;
@@ -695,10 +699,13 @@ footer {
 .textoscomunidad h3 {
   color: rgb(210, 210, 59);
   text-align: center;
-  margin-top: 30px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .textoscomunidad p {
+  margin-top: 20px;
   color: #fff;
   font-style: italic;
 }
@@ -716,14 +723,14 @@ footer {
 .contacto {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 90px;
   align-items: center;
-  padding: 0 20px 20px 20px;
+  padding: 0 30px 20px 20px;
 }
 
 /* ===== Imagen ===== */
 .contacto-img {
-  width: 60%;
+  width: 100%;
   border-radius: 15px;
 }
 
@@ -864,6 +871,12 @@ footer {
     margin: 0 auto 10px;
     max-width: 100%;
   }
+}
+.imgobra img {
+  max-width: 700px;
+  max-height: 700px;
+  object-fit: contain;
+  border-radius: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

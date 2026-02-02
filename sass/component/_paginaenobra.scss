@@ -1,0 +1,10 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+
+.imgobra img {
+  max-width: 700px;
+  max-height: 700px;
+  object-fit: contain;
+  border-radius: 50px;
+}

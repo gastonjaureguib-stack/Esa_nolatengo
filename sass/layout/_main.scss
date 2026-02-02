@@ -35,6 +35,8 @@ main {
   font-weight: bold;
 }
 
+
+
 /* Imagen */
 .catalogo-img {
   width: 100%;
@@ -47,6 +49,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.caja-plantas h3{
+  color: variables.$blanco
 }
 
 /* Botón catálogo */
