@@ -16,9 +16,16 @@
     margin-bottom: 15px;
 }
 
+.titulopresentacion{
+    color: variables.$blanco;
+    font-weight: bold
+}
+
+
+
 .margarita,
 .tomas {
-  @include mixins.card-base(variables.$amarillo-hover);
+  @include mixins.card-base(variables.$amarillo-principal);
   margin-bottom: 20px;
 }
 

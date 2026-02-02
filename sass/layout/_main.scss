@@ -52,22 +52,16 @@ main {
 /* Botón catálogo */
 .btn-catalogo {
 
-  @include mixins.boton(#2d6a4f);
+  @include mixins.boton(variables.$verde-oscuro);
   margin-top: 10px;
   align-self: center;
-  border-radius: 12px; // si querés distinto
+  border-radius: 12px; 
 }
 
 
-/* Badge */
-.badge-nuevo {
-  font-size: 0.9rem;
-  font-weight: bold;
+.btn-catalogo:hover {
+  filter: brightness(1.1);
 }
-
-
-/* ===== Boton animación ===== */
-
 
 /* ===== COMUNIDAD ===== */
 .comunidad {
@@ -94,9 +88,10 @@ main {
 
 /* Título */
 .comunidad-card h2 {
-  color:variables.$blanco;
+  color:variables.$verde-oscuro;
   margin: 0;
   font-size: 2rem;
+  font-weight: bold;
 }
 
 /* Párrafo */
@@ -117,7 +112,7 @@ main {
  .btn-comunidad {
   @include mixins.boton(variables.$verde-oscuro);
   display: inline-block;
-  border-radius: 40px; // override del mixin
+  border-radius: 40px; 
   margin-top: 30px;
   text-align: center;
 

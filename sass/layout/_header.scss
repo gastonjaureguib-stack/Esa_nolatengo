@@ -44,7 +44,7 @@ header {
 .navbar-toggler {
   border: none;     
   padding: 0;  
-  background-color: variables.$verde-muy-oscuro;
+  background-color: variables.$verde-oscuro;
  
 }
 
@@ -53,7 +53,7 @@ header {
 }
 
 .menuburger {
-    background-color:variables.$verde-muy-oscuro;
+    background-color:variables.$verde-oscuro;
     border-radius: 20px;
     margin-top: 30px;
 }
@@ -123,7 +123,9 @@ header {
 
 }
 
-
+.opcionmenu:hover {
+  filter: brightness(1.1);
+}
 
 section.login div {
     display: flex;
